@@ -1,0 +1,18 @@
+extends layout.pug
+
+block nav
+  .about
+    a.link(href='/' target="_blank") Analysis (Coming Soon)
+  .case-study
+    a.link(href='/' target="_blank") Source Code
+
+block link
+  p.sharing-link
+    a.link(id='myLink' target="_blank") Share Link
+    span(id="myLinkInput" class="aside disappear")
+    span(class="copy-container" data-tooltip="Copy to Clipboard")
+      i(data-feather="copy" class="copy-link" color="#4360df")
+    span(class="copy-status") Copied!
+
+block scripts
+  script(src='js/bundle.js')

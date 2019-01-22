@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css")
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='shortcut icon' href='assets/img/logo.ico' type='image/x-icon')
+  body
+    .navbar
+      a(href='/' target="_blank")
+        h1.logo Portal
+      .nav-items
+        block nav
+    p#safari Your browser doesn't support WebRTC yet.</br></br>Please use the Chrome or Firefox desktop browsers.
+    #portal.hide
+      .text-wrapper
+        .editor
+          .header
+            block link
+            a(href='/')
+              label#asdf() New Document
+            label#download(type='button') Save
+            label#upload(for='file') Upload
+            input#file(type='file' accept='.txt, .js, .rb, .md')
+          textarea(row='10' col='20')
+        p#peerId Online:
+      .video-modal.hide
+        .video-bar
+            i(data-feather="minus" class="minimize")
+            i(data-feather='x' class="exit")
+        video
+    script(src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js")
+    script.
+      feather.replace({ 'stroke-width': 3 });
+    block scripts
